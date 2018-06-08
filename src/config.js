@@ -5,22 +5,22 @@ let userConfig;
 try {
   userConfig = require('../config');
 } catch (e) {
-  throw new Error(`Config file could not be found or read! The error given was: ${e.message}`);
+  throw new Error(`Config dosyası bulunamadı veya okunamadı! Verilen hata şuydu: ${e.message}`);
 }
 
 const defaultConfig = {
-  "token": null,
-  "mailGuildId": null,
-  "mainGuildId": null,
-  "logChannelId": null,
+  "token": "NDU0NTYwNjQwNTM1NzU2ODEw.DfvYlQ.1hlMXhtAar2KkewQDlDu_2DMSTI",
+  "mailGuildId" : "453484457354067969",
+  "mainGuildId" : "444912588741148682",
+  "logChannelId": "454570728667480065",
 
-  "prefix": "!",
-  "snippetPrefix": "!!",
+  "prefix": ".",
+  "snippetPrefix": "..",
 
-  "status": "Message me for help!",
+  "status": "Bana destek için mesaj gönder!",
   "responseMessage": "Thank you for your message! Our mod team will reply to you here as soon as possible.",
 
-  "newThreadCategoryId": null,
+  "newThreadCategoryId": "454570688326402049",
   "mentionRole": "here",
 
   "inboxServerPermission": null,

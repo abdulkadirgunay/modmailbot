@@ -72,7 +72,7 @@ module.exports = bot => {
     const logUrl = await thread.getLogUrl();
     utils.postLog(utils.trimAll(`
       Modmail thread with ${thread.user_name} (${thread.user_id}) was closed by ${msg.author.username}
-      Logs: ${logUrl}
+      Kayıtlar: ${logUrl}
     `));
   });
 
@@ -83,13 +83,13 @@ module.exports = bot => {
     const thread = await threads.findOpenThreadByChannelId(channel.id);
     if (! thread) return;
 
-    console.log(`[INFO] Auto-closing thread with ${thread.user_name} because the channel was deleted`);
+    console.log(`[BİLGİ] Auto-closing thread with ${thread.user_name} because the channel was deleted`);
     await thread.close(true);
 
     const logUrl = await thread.getLogUrl();
     utils.postLog(utils.trimAll(`
-      Modmail thread with ${thread.user_name} (${thread.user_id}) was closed automatically because the channel was deleted
-      Logs: ${logUrl}
+      Kanal silindiği için ${thread.user_name} (${thread.user_id}) ile Modmail iş parçacığı otomatik olarak kapatıldı.
+      Kayıtlar: ${logUrl}
     `));
   });
 };
